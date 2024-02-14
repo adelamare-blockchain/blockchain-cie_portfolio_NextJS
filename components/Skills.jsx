@@ -35,7 +35,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>React</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  React
+                </h3>
               </div>
             </div>
           </div>
@@ -50,7 +52,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Next</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Next
+                </h3>
               </div>
             </div>
           </div>
@@ -66,7 +70,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Solidity</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Solidity
+                </h3>
               </div>
             </div>
           </div>
@@ -81,7 +87,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Hardhat</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Hardhat
+                </h3>
               </div>
             </div>
           </div>
@@ -97,7 +105,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>HTML</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  HTML
+                </h3>
               </div>
             </div>
           </div>
@@ -107,7 +117,9 @@ export default function Skills() {
                 <Image src={Css} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>CSS</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  CSS
+                </h3>
               </div>
             </div>
           </div>
@@ -122,7 +134,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>JavaScript</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  JavaScript
+                </h3>
               </div>
             </div>
           </div>
@@ -137,7 +151,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Tailwind</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Tailwind
+                </h3>
               </div>
             </div>
           </div>
@@ -152,7 +168,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Github</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Github
+                </h3>
               </div>
             </div>
           </div>
@@ -161,13 +179,15 @@ export default function Skills() {
               <div className='m-auto'>
                 <Image
                   src={Openzeppelin}
-                  width={100}
-                  height={100}
+                  width='64px'
+                  height='64px'
                   alt='/'
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>OpenZeppelin</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  OpenZeppelin
+                </h3>
               </div>
             </div>
           </div>
@@ -182,7 +202,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Firebase</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  Firebase
+                </h3>
               </div>
             </div>
           </div>
@@ -197,7 +219,9 @@ export default function Skills() {
                 />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>MongoDB</h3>
+                <h3 className='truncate whitespace-nowrap max-w-full'>
+                  MongoDB
+                </h3>
               </div>
             </div>
           </div>

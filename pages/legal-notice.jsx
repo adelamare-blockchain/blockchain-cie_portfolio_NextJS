@@ -37,7 +37,7 @@ export default function LegalNotice() {
           </div>
         </div>
         {/* RENSEIGNEMENTS JURIDIQUES */}
-        <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 hidden sm:block'>
+        <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 sm:block'>
           {/* Renseignements */}
           <div className='text-xl tracking-widest uppercase py-4'>
             Renseignements

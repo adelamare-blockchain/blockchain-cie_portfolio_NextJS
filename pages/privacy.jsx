@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
 
-        <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 hidden sm:block'>
+        <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 sm:block'>
           {/* INFORMATION WE COLLECT */}
           <h3 className='text-xl tracking-widest uppercase'>
             Information We Collect

@@ -11,7 +11,7 @@ import Contact from '@/components/Contact';
 // MAIN FUNCTION
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+    <main className='flex min-h-screen flex-col items-center justify-between'>
       <Head>
         <title>
           Blockchain & Cie | Fullstack Blockchain Development Company
