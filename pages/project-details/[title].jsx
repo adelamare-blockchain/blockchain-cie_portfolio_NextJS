@@ -1,10 +1,10 @@
 // Librairies
-import Image from 'next/image';
-import { RiRadioButtonFill } from 'react-icons/ri';
-import Link from 'next/link';
+import Image from "next/image";
+import { RiRadioButtonFill } from "react-icons/ri";
+import Link from "next/link";
 
 // Components
-import { useProjectContext } from '@/context/projectContext';
+import { useProjectContext } from "@/context/projectContext";
 
 // MAIN FUNCTION
 export default function ProjectDetails() {
@@ -32,9 +32,7 @@ export default function ProjectDetails() {
     projectUrl,
   } = projectData;
   // Variable 3 : check URL address valid
-  const isValidProjectUrl = typeof projectUrl === 'string';
-
-  console.log('BackgroundImg in ProjectDetails:', backgroundImg);
+  const isValidProjectUrl = typeof projectUrl === "string";
 
   return (
     <div className='w-full'>
@@ -46,7 +44,7 @@ export default function ProjectDetails() {
           fill={true}
           priority={true}
           src={backgroundImg}
-          alt='/'
+          alt='Blockchain & Cie - Your web3 trusted partner'
         />
 
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>

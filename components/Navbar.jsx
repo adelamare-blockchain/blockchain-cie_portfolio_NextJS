@@ -1,17 +1,21 @@
 // Librairies
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import {
   AiOutlineClose,
   AiOutlineMail,
   AiOutlineMenu,
-} from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill, BsPersonFill } from 'react-icons/bs';
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import {
+  BsTwitterX,
+  BsFillPersonLinesFill,
+  BsPersonFill,
+} from "react-icons/bs";
 
 // Components
-import NavLogo from '../public/assets/blockchain-cie-logo.png';
+import NavLogo from "../public/assets/blockchain-cie-logo.png";
 
 // MAIN FUNCTION
 export default function Navbar() {
@@ -33,15 +37,15 @@ export default function Navbar() {
         setShadow(false);
       }
     };
-    window.addEventListener('scroll', handleShadow);
+    window.addEventListener("scroll", handleShadow);
   }, []);
 
   return (
     <div
       className={
         shadow
-          ? 'bg-[#ecf0f3] fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-          : 'bg-[#ecf0f3] fixed w-full h-20 z-[100]'
+          ? "bg-[#ecf0f3] fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300"
+          : "bg-[#ecf0f3] fixed w-full h-20 z-[100]"
       }>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
@@ -49,8 +53,8 @@ export default function Navbar() {
             src={NavLogo}
             width={200}
             height='auto'
-            priority={true}
-            alt='/'
+            alt='Blockchain & Cie - Logo'
+            loading='lazy'
             className='cursor-pointer object-cover'
           />
         </Link>
@@ -99,26 +103,29 @@ export default function Navbar() {
       <div
         className={
           nav
-            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70'
-            : ''
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+            : ""
         }>
         {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-5 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-5 ease-in duration-500'
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-5 ease-in duration-500"
+              : "fixed left-[-100%] top-0 p-5 ease-in duration-500"
           }>
           <div>
             <div className='flex w-full items-center justify-between'>
-              <Image
-                src={NavLogo}
-                width={150}
-                height='auto'
-                priority={true}
-                alt='/'
-                className='object-cover'
-              />
+              <Link href='/'>
+                <Image
+                  onClick={handleNav}
+                  src={NavLogo}
+                  width={150}
+                  height='auto'
+                  alt='Blockchain & Cie - Logo'
+                  loading='lazy'
+                  className='object-cover'
+                />
+              </Link>
 
               <div
                 onClick={handleNav}
@@ -129,7 +136,7 @@ export default function Navbar() {
 
             <div className='border-b border-gray-300 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>
-                Let&apos;s build something legendary together
+                Let&apos;s build the future of Web3 together
               </p>
             </div>
           </div>
@@ -189,11 +196,11 @@ export default function Navbar() {
                 </a>
                 <a
                   onClick={() => setNav(false)}
-                  href='https://github.com/adelamare-blockchain'
+                  href='https://x.com/blockchain_cie'
                   target='_blank'
                   rel='noreferrer'>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
+                    <BsTwitterX />
                   </div>
                 </a>
                 <Link onClick={() => setNav(false)} href='/#contact'>

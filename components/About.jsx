@@ -1,9 +1,9 @@
-'use client';
+"use client";
 // Librairies
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import AboutImg from '@/public/assets/about.jpg';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import AboutImg from "@/public/assets/about.jpg";
 
 // MAIN FUNCTION
 export default function About() {
@@ -16,49 +16,44 @@ export default function About() {
           <p className='uppercase text-xl tracking-widest text-[#5651e5]'>
             About
           </p>
-          <h2 className='py-4'>Who We Are</h2>
-          <p className='py-2 text-gray-600'>
-            Blockchain & Cie is a french company specialized in
-            building back-end technologies such as blockchain inside
-            mobile responsive front-end UI applications. Blockchain &
-            Cie represents a group of passionate developers
-            understanding there is more than one way to accomplish a
-            task. Though we are most proficient in building front-end
-            applications using HTML, CSS, Javascript, React & Next.js,
-            we bring expertise as well in smart contracts development
-            using advanced Solidity in order to bring blockchain
-            solutions and solve complex data management problems for
-            businesses and organizations.
+          <h2 className='py-4'>Empowering Businesses with Web3</h2>
+          <p className='py-2 text-gray-800'>
+            Blockchain & Cie is a forward-thinking French tech company
+            dedicated to transforming the way businesses leverage
+            blockchain and web3 technologies. With a strong focus on
+            innovation and customization, we offer a range of services
+            that help organizations harness the power of decentralized
+            technologies to solve real-world challenges.
           </p>
-          <p className='py-2 text-gray-600'>
-            Created by Antoine Delamare, a fullstack blockchain
-            developer graduated with the{' '}
-            <Link
-              className='text-[#5651e5]'
-              href='https://www.francecompetences.fr/recherche/rs/5000/'
-              target='_blank'
-              rel='noreferrer'>
-              RS5000 certificate{' '}
-              <b>
-                &quot;Leveraging blockchain in applications
-                development&quot;
-              </b>
-            </Link>{' '}
-            from{' '}
-            <Link
-              className='text-[#5651e5]'
-              href='https://www.acadee-formation.com/nos-formations/formation-developpeur-blockchain-solidity-web3/'
-              target='_blank'
-              rel='noreferrer'>
-              The Acadee I.A. & Web3 Academy
-            </Link>
-            , Blockchain & Cie brings its expertise to provide
-            innovative solutions like supply chain tracking, online
-            voting systems, and even property registries, showcasing
-            versatility and applicability across various domains.
+          <p className='py-2 text-gray-800'>
+            Our expertise spans across multiple areas, including the
+            development of bespoke software solutions, business
+            intelligence, data science consulting, and blockchain
+            integration. We build secure, scalable applications, from
+            back-end infrastructures to mobile-responsive front-end
+            interfaces. Whether it’s creating decentralized
+            applications (dApps) or integrating blockchain in
+            traditional systems, we bring your vision to life.
+          </p>
+          <p className='py-2 text-gray-800'>
+            Founded by Antoine Delamare, a certified blockchain
+            developer with a specialization in smart contract
+            development and decentralized technologies, Blockchain &
+            Cie provides consulting and training services to help
+            companies navigate the complex world of web3. Our team is
+            passionate about unlocking the full potential of
+            blockchain, offering solutions in areas such as supply
+            chain optimization, digital identity, and decentralized
+            finance (DeFi).
+          </p>
+          <p className='py-2 text-gray-800'>
+            Let us partner with you to develop robust, future-proof
+            solutions that drive your business forward. Explore how
+            our blockchain expertise can streamline processes, reduce
+            costs, and create new opportunities for growth.
           </p>
           <Link href='/#projects'>
-            <p className='py-2 text-gray-600 underline cursor-pointer'>
+            <p className='py-2 text-gray-800 underline cursor-pointer'>
               Check out some of our latest projects.
             </p>
           </Link>
@@ -67,8 +62,8 @@ export default function About() {
           <Image
             src={AboutImg}
             className='rounded-xl'
-            alt='/'
-            priority={true}
+            alt='Blockchain & Cie - About section'
+            loading='lazy'
           />
         </div>
       </div>

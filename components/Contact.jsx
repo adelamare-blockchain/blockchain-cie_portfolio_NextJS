@@ -1,18 +1,18 @@
-'use client';
+"use client";
 // Librairies
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import { toast } from 'react-toastify';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsTwitterX, BsFillPersonLinesFill } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 // Components
-import { Loader } from './UI/Loader/Loader';
-import ContactImg from '../public/assets/contact.jpg';
+import { Loader } from "./UI/Loader/Loader";
+import ContactImg from "../public/assets/contact.jpg";
 
 // MAIN FUNCTION
 export default function Contact() {
@@ -21,11 +21,11 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   // State 2 : formData
   const [form, setForm] = useState({
-    senderName: '',
-    phone: '',
-    senderEmail: '',
-    subject: '',
-    message: '',
+    senderName: "",
+    phone: "",
+    senderEmail: "",
+    subject: "",
+    message: "",
   });
   // State 3 - useRouter()
   const routeur = useRouter();
@@ -54,7 +54,7 @@ export default function Contact() {
       !subject ||
       !message
     ) {
-      toast.error('Please fill in all fields');
+      toast.error("Please fill in all fields");
       return;
     }
 
@@ -62,36 +62,36 @@ export default function Contact() {
       // Initialisation de la transaction
       setIsLoading(true);
       // Envoyez les données au serveur d'action
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(form),
       });
 
-      console.log('Formulaire : ', form);
+      console.log("Formulaire : ", form);
 
       if (response.ok) {
         toast.success(
-          'Your email message has been sent successfully'
+          "Your email message has been sent successfully"
         );
-        console.log('Email sent successfully : ', form);
-        routeur.push('/'); // retour Page accueil
+        console.log("Email sent successfully : ", form);
+        routeur.push("/"); // retour Page accueil
       } else {
         const responseData = await response.json();
-        console.error('Failed to send email : ', responseData);
+        console.error("Failed to send email : ", responseData);
         toast.error(
           `Erreur lors de l'envoi du mail : `,
           responseData
         );
       }
       setForm({
-        senderName: '',
-        phone: '',
-        senderEmail: '',
-        subject: '',
-        message: '',
+        senderName: "",
+        phone: "",
+        senderEmail: "",
+        subject: "",
+        message: "",
       });
       setIsLoading(false); // retour à setIsLoading(false)
     } catch (error) {
@@ -118,13 +118,13 @@ export default function Contact() {
                 <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
                   src={ContactImg}
-                  alt='/'
-                  priority={true}
+                  alt='Blockchain & Cie - Your web3 trusted partner'
+                  loading='lazy'
                 />
               </div>
               <div>
                 <h2 className='py-2'>Blockchain & Cie</h2>
-                <p>Fullstack Blockchain Development Company</p>
+                <p>Blockchain Innovation Company</p>
                 <p className='py-4'>
                   Available for full remote freelance positions.
                   <br />
@@ -167,17 +167,19 @@ export default function Contact() {
                     </Link>
                     <span className='py-2 text-center'>Linkedin</span>
                   </div>
-                  {/* GitHub */}
+                  {/* Twitter */}
                   <div className='p-4 flex flex-col items-center'>
                     <Link
-                      href='https://github.com/adelamare-blockchain'
+                      href='https://x.com/blockchain_cie'
                       target='_blank'
                       rel='noreferrer'>
                       <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaGithub />
+                        <BsTwitterX />
                       </div>
                     </Link>
-                    <span className='py-2 text-center'>GitHub</span>
+                    <span className='py-2 text-center'>
+                      &quot;X&quot;
+                    </span>
                   </div>
 
                   {/* <Link href='/resume'>

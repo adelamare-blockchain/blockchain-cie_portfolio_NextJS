@@ -1,9 +1,9 @@
 // Librairies
-import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 // Components
-import { useProjectContext } from '@/context/projectContext';
+import { useProjectContext } from "@/context/projectContext";
 
 // MAIN FUNCTION
 export default function ProjectItem({ project }) {
@@ -36,23 +36,23 @@ export default function ProjectItem({ project }) {
       <Image
         className='rounded-xl group-hover:opacity-10'
         src={project.backgroundImg}
-        alt='/'
-        priority={true}
+        alt={project.title}
+        loading='lazy'
       />
-      <div className='hidden group-hover:flex flex-col items-center justify-center absolute inset-0'>
-        <h3 className='max-w-[90%] sm:max-w-md text-center text-2xl text-white tracking-wide'>
+      <div className='absolute inset-0 flex flex-col items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50'>
+        <h3 className='text-center text-xl sm:text-2xl text-white font-bold tracking-wide mb-2'>
           {project.title}
         </h3>
 
-        <p className='pb-4 pt-2 text-white text-center'>
+        <p className='text-white text-center text-sm sm:text-base mb-4'>
           {project.resume}
         </p>
 
-        <p
+        <button
           onClick={handleNavigate}
-          className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer p-4'>
+          className='bg-white text-white font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors duration-300'>
           More Info
-        </p>
+        </button>
       </div>
     </div>
   );

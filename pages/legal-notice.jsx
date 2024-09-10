@@ -1,8 +1,8 @@
 // Librairie
-import Head from 'next/head';
-import Link from 'next/link';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import Head from "next/head";
+import Link from "next/link";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 export default function LegalNotice() {
   // Rendu JSX
@@ -23,7 +23,7 @@ export default function LegalNotice() {
         <h2 className='text-xl tracking-widest uppercase text-[#5651e5]'>
           Legal Notice
         </h2>
-        <div className='my-4 p-4 w-full flex justify-between items-center col-span-3 lg:col-span-2 h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+        <div className='my-4 p-4 w-full flex justify-between items-center col-span-3 lg:col-span-2 h-full shadow-xl shadow-gray-400 rounded-xl'>
           <h2 className='text-center'>Blockchain & Cie.</h2>
           <div className='flex'>
             <Link
