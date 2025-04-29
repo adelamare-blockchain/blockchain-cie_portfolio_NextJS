@@ -1,9 +1,9 @@
 // Librairies
-import Link from 'next/link';
+import Link from "next/link";
 
 // Components
-import { projectsData } from '@/constants/constant';
-import ProjectItem from './ProjectItem';
+import { projectsData } from "@/constants/projectsData";
+import ProjectItem from "./ProjectItem";
 
 // MAIN FUNCTION
 export default function Projects() {

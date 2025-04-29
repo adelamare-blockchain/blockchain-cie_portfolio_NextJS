@@ -1,35 +1,15 @@
 // Librairies
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
-
-// Components
-import { useProjectContext } from "@/context/projectContext";
 
 // MAIN FUNCTION
 export default function ProjectItem({ project }) {
-  // STATES
-  // State 1 : setProject
-  const { setProject } = useProjectContext();
-
   // VARIABLES
-  // Variable 1 : useRouter()
-  const router = useRouter();
-
-  // METHODES
-  // Méthode 1 : handleNavigate
-  const handleNavigate = () => {
-    // Stocker l'image dans le state avant la navigation
-    setProject(project);
-    router.push(
-      {
-        pathname: `/project-details/${encodeURIComponent(
-          project.title
-        )}`,
-      },
-      null,
-      { shallow: true }
-    );
-  };
+  // Créer une URL conviviale en convertissant le titre en format URL
+  const urlFriendlyTitle = project.title
+    .toLowerCase()
+    .replace(/\s+/g, "-");
 
   return (
     <div className='relative overflow-hidden w-full h-auto shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
@@ -48,11 +28,11 @@ export default function ProjectItem({ project }) {
           {project.resume}
         </p>
 
-        <button
-          onClick={handleNavigate}
-          className='bg-white text-white font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors duration-300'>
+        <Link
+          href={`/project-details/${urlFriendlyTitle}`}
+          className='bg-white text-gray-800 font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors duration-300'>
           More Info
-        </button>
+        </Link>
       </div>
     </div>
   );

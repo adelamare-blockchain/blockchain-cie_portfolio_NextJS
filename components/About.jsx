@@ -16,41 +16,29 @@ export default function About() {
           <p className='uppercase text-xl tracking-widest text-[#5651e5]'>
             About
           </p>
-          <h2 className='py-4'>Empowering Businesses with Web3</h2>
+          <h2 className='py-4'>Where Blockchain Meets AI</h2>
           <p className='py-2 text-gray-800'>
-            Blockchain & Cie is a forward-thinking French tech company
-            dedicated to transforming the way businesses leverage
-            blockchain and web3 technologies. With a strong focus on
-            innovation and customization, we offer a range of services
-            that help organizations harness the power of decentralized
-            technologies to solve real-world challenges.
+            Blockchain & Cie is a French tech innovator at the intersection of blockchain and artificial intelligence. 
+            We merge these powerful technologies to unlock new possibilities for forward-thinking businesses ready 
+            to embrace the future of digital transformation.
           </p>
-          <p className='py-2 text-gray-800'>
-            Our expertise spans across multiple areas, including the
-            development of bespoke software solutions, business
-            intelligence, data science consulting, and blockchain
-            integration. We build secure, scalable applications, from
-            back-end infrastructures to mobile-responsive front-end
-            interfaces. Whether it’s creating decentralized
-            applications (dApps) or integrating blockchain in
-            traditional systems, we bring your vision to life.
+          <p className='py-2 text-gray-800 font-medium'>
+            <span className='text-[#5651e5]'>Our Core Expertise:</span>
           </p>
+          <ul className='list-disc pl-6 py-2 text-gray-800 space-y-1'>
+            <li><span className='font-medium'>Smart Contract Security</span> — Comprehensive audits and vulnerability assessments</li>
+            <li><span className='font-medium'>AI-Enhanced Blockchain Solutions</span> — Intelligent dApps and automated systems</li>
+            <li><span className='font-medium'>Strategic Consulting</span> — Guidance for blockchain and AI integration</li>
+            <li><span className='font-medium'>Expert Training</span> — Specialized workshops for technical teams</li>
+          </ul>
           <p className='py-2 text-gray-800'>
-            Founded by Antoine Delamare, a certified blockchain
-            developer with a specialization in smart contract
-            development and decentralized technologies, Blockchain &
-            Cie provides consulting and training services to help
-            companies navigate the complex world of web3. Our team is
-            passionate about unlocking the full potential of
-            blockchain, offering solutions in areas such as supply
-            chain optimization, digital identity, and decentralized
-            finance (DeFi).
+            Our certified developers combine Solidity, JavaScript, and modern AI frameworks to create 
+            secure, scalable applications. We leverage advanced tools like Mistral AI and Claude Sonnet, 
+            with Make.com automation to deliver intelligence at every layer of your blockchain solution.
           </p>
-          <p className='py-2 text-gray-800'>
-            Let us partner with you to develop robust, future-proof
-            solutions that drive your business forward. Explore how
-            our blockchain expertise can streamline processes, reduce
-            costs, and create new opportunities for growth.
+          <p className='py-3 text-gray-800 font-medium'>
+            Partner with us to develop future-proof systems that transform challenges into opportunities 
+            in today's rapidly evolving digital landscape.  
           </p>
           <Link href='/#projects'>
             <p className='py-2 text-gray-800 underline cursor-pointer'>

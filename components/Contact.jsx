@@ -13,6 +13,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 // Components
 import { Loader } from "./UI/Loader/Loader";
 import ContactImg from "../public/assets/contact.jpg";
+import CalendlyModal from "@/components/UI/CalendlyModal";
 
 // MAIN FUNCTION
 export default function Contact() {
@@ -29,6 +30,14 @@ export default function Contact() {
   });
   // State 3 - useRouter()
   const routeur = useRouter();
+  // State 4 - manage modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Open the modal
+  const openModal = () => setIsModalOpen(!isModalOpen);
+
+  // Close the modal
+  const closeModal = () => setIsModalOpen(false);
 
   // METHODES
   // Méthode 1 : handleChange
@@ -118,18 +127,30 @@ export default function Contact() {
                 <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
                   src={ContactImg}
-                  alt='Blockchain & Cie - Your web3 trusted partner'
-                  loading='lazy'
+                  alt='/'
                 />
               </div>
               <div>
                 <h2 className='py-2'>Blockchain & Cie</h2>
-                <p>Blockchain Innovation Company</p>
+                <p>Blockchain & AI Business Solutions</p>
                 <p className='py-4'>
-                  Available for full remote freelance positions.
-                  <br />
-                  Contact us and let&apos;s talk.
+                  Schedule a call or contact us via the form. Our team
+                  is ready to discuss how our blockchain and AI
+                  expertise can benefit your business.
                 </p>
+              </div>
+              {/* Calendly Quick Button */}
+              <div className='mt-4'>
+                <p className='uppercase text-sm tracking-widest text-[#5651e5] mb-2'>
+                  Quick Schedule
+                </p>
+                <a href='#calendly-section'>
+                  <button
+                    onClick={openModal}
+                    className='w-full p-4 text-gray-100'>
+                    Book a 30-Min Diagnostic Call
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -181,130 +202,36 @@ export default function Contact() {
                       &quot;X&quot;
                     </span>
                   </div>
-
-                  {/* <Link href='/resume'>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <BsFillPersonLinesFill />
-                    </div>
-                  </Link> */}
                 </div>
               </div>
-
-              {/* <form
-                onSubmit={handleSubmit}
-                encType='multipart/form-data'>
-                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                  <div className='flex flex-col'>
-                    <label
-                      htmlFor='senderName'
-                      className='uppercase text-sm py-2'>
-                      Name
-                    </label>
-                    <input
-                      id='senderName'
-                      name='senderName'
-                      type='text'
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      placeholder='Your name'
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className='flex flex-col'>
-                    <label
-                      htmlFor='phone'
-                      className='uppercase text-sm py-2'>
-                      Phone Number
-                    </label>
-                    <input
-                      id='phone'
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      name='phone'
-                      type='text'
-                      placeholder='Your phone'
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label
-                    htmlFor='senderEmail'
-                    className='uppercase text-sm py-2'>
-                    Email
-                  </label>
-                  <input
-                    id='senderEmail'
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    name='senderEmail'
-                    type='email'
-                    placeholder='Your email'
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label
-                    htmlFor='subject'
-                    className='uppercase text-sm py-2'>
-                    Subject
-                  </label>
-                  <input
-                    id='subject'
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    name='subject'
-                    type='text'
-                    placeholder='Your subject'
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label
-                    htmlFor='message'
-                    className='uppercase text-sm py-2'>
-                    Message
-                  </label>
-                  <textarea
-                    id='message'
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
-                    name='message'
-                    type='text'
-                    onChange={handleChange}
-                    placeholder='Your message'
-                    required></textarea>
-                </div>
-                <button
-                  className='w-full p-4 text-gray-100 mt-4'
-                  disabled={isLoading}>
-                  {isLoading ? 'Sending...' : 'Send Message'}
-                </button>
-              </form> */}
             </div>
           </div>
         </div>
+
+        {/* Calendly Modal */}
+        <CalendlyModal isOpen={isModalOpen} onClose={closeModal} />
+
         {/* Footer */}
         <div className='flex justify-center py-6'>
           <div className='flex flex-col items-center'>
+            <div className='flex mt-2 space-x-4'>
+              <Link
+                className='text-gray-700 hover:text-[#5651e5] transition-colors duration-300'
+                href='/privacy'>
+                Privacy Policy
+              </Link>
+              <span className='text-gray-400'>|</span>
+              <Link
+                className='text-gray-700 hover:text-[#5651e5] transition-colors duration-300'
+                href='/legal-notice'>
+                Legal Notice
+              </Link>
+            </div>
             <p>
               &copy; {new Date().getFullYear()} |
               <strong> Blockchain & Cie.</strong> | All Rights
               Reserved.
             </p>
-            <div className='flex mt-2 text-[#5651e5]'>
-              <Link
-                className='mr-4 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'
-                href='/privacy'>
-                Privacy Policy
-              </Link>
-
-              <Link
-                className='mr-4 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'
-                href='/legal-notice'>
-                Legal Notice
-              </Link>
-            </div>
           </div>
         </div>
         {/* BACK PAGE */}

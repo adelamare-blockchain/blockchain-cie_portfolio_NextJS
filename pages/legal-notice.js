@@ -129,7 +129,7 @@ export default function LegalNotice() {
         </div>
         {/* BACK PAGE */}
         <div className='flex justify-center py-6'>
-          <Link href='#legal-notice'>
+          <Link href='/#contact'>
             <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
               <HiOutlineChevronDoubleUp
                 className='text-[#5651e5]'

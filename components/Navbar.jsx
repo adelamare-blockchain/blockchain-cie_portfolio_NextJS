@@ -66,6 +66,11 @@ export default function Navbar() {
                 Home
               </li>
             </Link>
+            <Link href='/#services'>
+              <li className='ml-10 text-sm uppercase hover:border-b'>
+                Services
+              </li>
+            </Link>
             <Link href='/#about'>
               <li className='ml-10 text-sm uppercase hover:border-b'>
                 About
@@ -147,6 +152,13 @@ export default function Navbar() {
                   onClick={() => setNav(false)}
                   className='py-4 text-sm'>
                   Home
+                </li>
+              </Link>
+              <Link href='/#services'>
+                <li
+                  onClick={() => setNav(false)}
+                  className='py-4 text-sm'>
+                  Services
                 </li>
               </Link>
               <Link href='/#about'>

@@ -1,26 +1,45 @@
 // Librairies
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Components
-import { useProjectContext } from "@/context/projectContext";
+import { projectsData } from "@/constants/projectsData";
 
 // MAIN FUNCTION
 export default function ProjectDetails() {
   // STATES
-  // State 1 : projectData
-  const { projectData } = useProjectContext();
-
-  if (!projectData) {
-    // Gérer le cas où il n'y a pas de données de projet disponibles
-    return null;
-  }
+  const [project, setProject] = useState(null);
 
   // VARIABLES
-  // Variable 1 - ProjectData
+  const router = useRouter();
+  const { title } = router.query;
+
+  // EFFECTS
+  useEffect(() => {
+    if (title) {
+      // Trouver le projet correspondant au titre dans l'URL
+      const formattedTitle = String(title).replace(/-/g, " ");
+      const foundProject = projectsData.find(
+        (p) => p.title.toLowerCase() === formattedTitle.toLowerCase()
+      );
+
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        // Rediriger vers la page des projets si le projet n'est pas trouvé
+        router.push("/#projects");
+      }
+    }
+  }, [title, router]);
+
+  // Si les données du projet ne sont pas encore chargées ou disponibles
+  if (!project) return null;
+
+  // VARIABLES
   const {
-    title,
     description,
     backgroundImg,
     resume,
@@ -30,8 +49,9 @@ export default function ProjectDetails() {
     backend,
     blockchain,
     projectUrl,
-  } = projectData;
-  // Variable 3 : check URL address valid
+  } = project;
+
+  // Variable : check URL address valid
   const isValidProjectUrl = typeof projectUrl === "string";
 
   return (
@@ -48,7 +68,7 @@ export default function ProjectDetails() {
         />
 
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>{title}</h2>
+          <h2 className='py-2'>{project.title}</h2>
           <h3>{resume}</h3>
         </div>
       </div>
