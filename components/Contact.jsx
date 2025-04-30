@@ -127,7 +127,8 @@ export default function Contact() {
                 <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
                   src={ContactImg}
-                  alt='/'
+                  alt='Blockchain & Cie - Contact Illustration'
+                  loading='lazy'
                 />
               </div>
               <div>

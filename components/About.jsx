@@ -18,27 +18,53 @@ export default function About() {
           </p>
           <h2 className='py-4'>Where Blockchain Meets AI</h2>
           <p className='py-2 text-gray-800'>
-            Blockchain & Cie is a French tech innovator at the intersection of blockchain and artificial intelligence. 
-            We merge these powerful technologies to unlock new possibilities for forward-thinking businesses ready 
-            to embrace the future of digital transformation.
+            Blockchain & Cie is a French tech innovator at the
+            intersection of blockchain and artificial intelligence. We
+            merge these powerful technologies to unlock new
+            possibilities for forward-thinking businesses ready to
+            embrace the future of digital transformation.
           </p>
           <p className='py-2 text-gray-800 font-medium'>
-            <span className='text-[#5651e5]'>Our Core Expertise:</span>
+            <span className='text-[#5651e5]'>
+              Our Core Expertise:
+            </span>
           </p>
           <ul className='list-disc pl-6 py-2 text-gray-800 space-y-1'>
-            <li><span className='font-medium'>Smart Contract Security</span> — Comprehensive audits and vulnerability assessments</li>
-            <li><span className='font-medium'>AI-Enhanced Blockchain Solutions</span> — Intelligent dApps and automated systems</li>
-            <li><span className='font-medium'>Strategic Consulting</span> — Guidance for blockchain and AI integration</li>
-            <li><span className='font-medium'>Expert Training</span> — Specialized workshops for technical teams</li>
+            <li>
+              <span className='font-medium'>
+                Smart Contract Security
+              </span>{" "}
+              — Comprehensive audits and vulnerability assessments
+            </li>
+            <li>
+              <span className='font-medium'>
+                AI-Enhanced Blockchain Solutions
+              </span>{" "}
+              — Intelligent dApps and automated systems
+            </li>
+            <li>
+              <span className='font-medium'>
+                Strategic Consulting
+              </span>{" "}
+              — Guidance for blockchain and AI integration
+            </li>
+            <li>
+              <span className='font-medium'>Expert Training</span> —
+              Specialized workshops for technical teams
+            </li>
           </ul>
           <p className='py-2 text-gray-800'>
-            Our certified developers combine Solidity, JavaScript, and modern AI frameworks to create 
-            secure, scalable applications. We leverage advanced tools like Mistral AI and Claude Sonnet, 
-            with Make.com automation to deliver intelligence at every layer of your blockchain solution.
+            Our certified developers combine Solidity,
+            JavaScript/TypeScript, and modern AI frameworks to create
+            secure, scalable applications. We leverage advanced tools
+            like Mistral AI and Claude Sonnet, with Make.com
+            automation to deliver intelligence at every layer of your
+            blockchain solution.
           </p>
           <p className='py-3 text-gray-800 font-medium'>
-            Partner with us to develop future-proof systems that transform challenges into opportunities 
-            in today's rapidly evolving digital landscape.  
+            Partner with us to develop future-proof systems that
+            transform challenges into opportunities in today&apos;s
+            rapidly evolving digital landscape.
           </p>
           <Link href='/#projects'>
             <p className='py-2 text-gray-800 underline cursor-pointer'>
@@ -51,6 +77,8 @@ export default function About() {
             src={AboutImg}
             className='rounded-xl'
             alt='Blockchain & Cie - About section'
+            width='auto'
+            height='auto'
             loading='lazy'
           />
         </div>

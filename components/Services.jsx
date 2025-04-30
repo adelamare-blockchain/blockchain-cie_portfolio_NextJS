@@ -1,6 +1,5 @@
 // Librairies
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { IoCalendarOutline } from "react-icons/io5";
@@ -154,11 +153,11 @@ export default function Services() {
                     7 000 €
                   </p>
                   <p className='text-3xl font-bold text-[#5651e5]'>
-                    3 500 €
+                    5 000 €
                   </p>
                 </div>
                 <p className='text-center text-sm mb-3 text-gray-600'>
-                  Save 3 500 € with our {new Date().getFullYear()}{" "}
+                  Save 2 000 € with our {new Date().getFullYear()}{" "}
                   offer
                 </p>
                 <div className='flex justify-center'>
@@ -184,7 +183,7 @@ export default function Services() {
                   Training
                 </p>
                 <h3 className='py-2 text-xl'>
-                  1-Day "Blockchain + AI"
+                  1-Day &quot;Blockchain + AI&quot;
                 </h3>
                 <div className='border-b border-gray-300 my-4'></div>
               </div>
@@ -252,10 +251,10 @@ export default function Services() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <div className='bg-white p-4 rounded-lg shadow-sm'>
               <p className='text-gray-800 italic'>
-                "Blockchain & Cie's remote security audit saved us
-                from potential vulnerabilities. The distance was never
-                an issue—their thorough approach and expertise are
-                unmatched."
+                &quot;Blockchain & Cie&apos;s remote security audit
+                saved us from potential vulnerabilities. The distance
+                was never an issue—their thorough approach and
+                expertise are unmatched.&quot;
               </p>
               <p className='text-right text-sm mt-4 text-gray-600'>
                 — CTO, FinTech Startup, Singapore
@@ -263,10 +262,10 @@ export default function Services() {
             </div>
             <div className='bg-white p-4 rounded-lg shadow-sm'>
               <p className='text-gray-800 italic'>
-                "The POC they developed exceeded our expectations
+                &quot;The POC they developed exceeded our expectations
                 despite working entirely remotely. Their collaboration
                 tools made the process seamless and helped us secure
-                additional funding for our blockchain project."
+                additional funding for our blockchain project.&quot;
               </p>
               <p className='text-right text-sm mt-4 text-gray-600'>
                 — Innovation Director, Enterprise Client, Germany
@@ -274,10 +273,10 @@ export default function Services() {
             </div>
             <div className='bg-white p-4 rounded-lg shadow-sm'>
               <p className='text-gray-800 italic'>
-                "Our globally distributed team gained valuable
+                &quot;Our globally distributed team gained valuable
                 insights during the virtual training. The interactive
                 exercises were particularly helpful for our developers
-                across different time zones."
+                across different time zones.&quot;
               </p>
               <p className='text-right text-sm mt-4 text-gray-600'>
                 — Lead Developer, Web3 Company, Canada

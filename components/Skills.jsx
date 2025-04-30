@@ -10,7 +10,7 @@ import NodeJS from "@/public/assets/skills/node.png";
 import Wagmi from "@/public/assets/skills/wagmi.png";
 import NextJS from "@/public/assets/skills/nextjs.png";
 import MistralAI from "@/public/assets/skills/mistral-ai.png";
-import MakeLogo from "@/public/assets/skills/Make-Logo.svg";
+import MakeLogo from "@/public/assets/skills/make-logo.svg";
 
 // MAIN FUNCTION
 export default function Skills() {
@@ -55,7 +55,7 @@ export default function Skills() {
                 <Image
                   src={Solidity}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Solidity'
                 />
               </div>
@@ -77,7 +77,7 @@ export default function Skills() {
                 <Image
                   src={Hardhat}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Hardhat'
                 />
               </div>
@@ -99,7 +99,7 @@ export default function Skills() {
                 <Image
                   src={Openzeppelin}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='OpenZeppelin'
                 />
               </div>
@@ -121,7 +121,7 @@ export default function Skills() {
                 <Image
                   src={Wagmi}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Wagmi'
                 />
               </div>
@@ -144,7 +144,7 @@ export default function Skills() {
                 <Image
                   src={MistralAI}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='AI Integration'
                 />
               </div>
@@ -166,7 +166,7 @@ export default function Skills() {
                 <Image
                   src={MakeLogo}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Automation'
                 />
               </div>
@@ -187,7 +187,7 @@ export default function Skills() {
                 <Image
                   src={NextJS}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Next.js'
                 />
               </div>
@@ -209,7 +209,7 @@ export default function Skills() {
                 <Image
                   src={NodeJS}
                   width={64}
-                  height={64}
+                  height='auto'
                   alt='Node.js'
                 />
               </div>

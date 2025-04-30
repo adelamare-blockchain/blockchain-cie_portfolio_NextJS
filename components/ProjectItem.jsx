@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // MAIN FUNCTION
+/**
+ * Composant pour afficher un aperçu de projet avec une image et un lien vers les détails
+ * @param {object} props Propriétés contenant les données du projet
+ * @returns {JSX.Element} Élément d'aperçu de projet
+ */
 export default function ProjectItem({ project }) {
   // VARIABLES
   // Créer une URL conviviale en convertissant le titre en format URL
@@ -16,7 +21,9 @@ export default function ProjectItem({ project }) {
       <Image
         className='rounded-xl group-hover:opacity-10'
         src={project.backgroundImg}
-        alt={project.title}
+        alt={`${project.title} - Blockchain project`}
+        width={1000}
+        height={700}
         loading='lazy'
       />
       <div className='absolute inset-0 flex flex-col items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-black bg-opacity-50'>

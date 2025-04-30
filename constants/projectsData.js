@@ -7,23 +7,10 @@ import carShowcaseImg from "@/public/assets/projects/carshowcase.png";
 import pimpMyBlogImg from "@/public/assets/projects/pimpmyblog.png";
 import wishListImg from "@/public/assets/projects/WishListDApp.png";
 import spaceDAOImg from "@/public/assets/projects/spacedao.png";
+import flareAIPricePredictorImg from "@/public/assets/projects/FlareAIPricePredictor.png";
 
 // MAIN FUNCTION
 export const projectsData = [
-  {
-    title: "EasyDEX",
-    backgroundImg: easydexImg,
-    description:
-      "This revolutionary DEX platform offers seamless token swapping and efficient liquidity management. It integrates real-time data using Chainlink Oracle for informed decision-making while ensuring enhanced security through cutting-edge blockchain technology. Designed for all users, it provides an intuitive and optimized experience across all devices. This DEX combines performance, reliability, and scalability to meet the needs of both individual traders and institutions. As a pioneer in decentralized exchanges, we're reinventing the cryptocurrency trading experience while guaranteeing transaction security and transparency.",
-    projectUrl: "https://easydex.vercel.app",
-    resume:
-      "An advanced DEX platform offering seamless token swaps on the Sepolia Testnet blockchain with real-time market rates and historical swap tracking.",
-    language: "JavaScript, Solidity",
-    frontend: "React, TailwindCSS",
-    style: "TailwindCSS",
-    backend: "Hardhat | Node.js",
-    blockchain: "Sepolia Eth (Testnet)",
-  },
   {
     title: "SpaceDAO STM",
     backgroundImg: spaceDAOImg,
@@ -38,6 +25,35 @@ export const projectsData = [
     style: "TailwindCSS",
     backend: "Vite | Node.js",
     blockchain: "Arbitrum (Mainnet & Testnets)",
+  },
+  {
+    title: "Flare AI Price Predictor",
+    backgroundImg: flareAIPricePredictorImg,
+    description:
+      "The Flare AI Price Predictor dApp combines reliable on-chain price feeds from Flare’s FTSO with a three-tiered AI prediction system—leveraging Mistral AI for cloud-based forecasts, an ONNX Runtime model for client-side inference, and a lightweight weighted-average fallback—to deliver transparent, immutable historical data and actionable price predictions. Its intuitive React/Next.js interface guides users step by step through wallet connection on Coston2, data recording via a Solidity/Hardhat smart contract, and real-time visualization of both past prices and AI-generated forecasts, all with graceful degradation to ensure uninterrupted service. This educational platform empowers developers to explore DeFi UI patterns, oracle integration, and AI-powered analytics in a single, responsive dApp experience.",
+    projectUrl: "https://flare-ai-price-predictor.vercel.app/",
+    resume:
+      "An educational dApp on Flare’s Coston2 testnet that records FLR/USD prices via FTSO oracles on-chain and offers multi-layer AI predictions (Mistral AI, ONNX, weighted average) through a React/Next.js frontend.",
+    language: "Solidity, JavaScript",
+    frontend:
+      "Next.js 15.x, React 19.0.0, Tailwind CSS 4.x, Mistral AI API, Onnx Runtime-web",
+    style: "Tailwind CSS (responsive, mobile-first)",
+    backend: "Hardhat 2.23.0 | Node.js",
+    blockchain: "Flare Network – Coston2 Testnet (FTSO)",
+  },
+  {
+    title: "EasyDEX",
+    backgroundImg: easydexImg,
+    description:
+      "This revolutionary DEX platform offers seamless token swapping and efficient liquidity management. It integrates real-time data using Chainlink Oracle for informed decision-making while ensuring enhanced security through cutting-edge blockchain technology. Designed for all users, it provides an intuitive and optimized experience across all devices. This DEX combines performance, reliability, and scalability to meet the needs of both individual traders and institutions. As a pioneer in decentralized exchanges, we're reinventing the cryptocurrency trading experience while guaranteeing transaction security and transparency.",
+    projectUrl: "https://easydex.vercel.app",
+    resume:
+      "An advanced DEX platform offering seamless token swaps on the Sepolia Testnet blockchain with real-time market rates and historical swap tracking.",
+    language: "JavaScript, Solidity",
+    frontend: "React, TailwindCSS",
+    style: "TailwindCSS",
+    backend: "Hardhat | Node.js",
+    blockchain: "Sepolia Eth (Testnet)",
   },
   {
     title: "Crowdfunding dApp",
